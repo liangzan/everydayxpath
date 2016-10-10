@@ -1,0 +1,17 @@
+/* Add here all your css styles (customizations) */
+a.logo {
+    font-size: 31px;
+    font-weight: 200;
+    /*line-height: 15px;*/
+    padding: 15px 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+a.logo:hover{
+    text-decoration: none;
+}
+
+a.logo > span {
+    color: #72c02c;
+}
