@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
   <head>
-    <title>Everyday XPath | XPath Reference</title>
+    <title>Everyday XPath | XPath Reference | Operators</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -306,10 +306,110 @@
             <div class="row margin-bottom-20">
               <!-- Paragraph Examples -->
               <div class="col-md-12">
-                <div class="headline"><h2>XPath Reference</h2></div>
+                <div class="headline"><h2>Operators</h2></div>
                 <p>
-                  This site contains the reference to XPath syntax, operators, axes and functions. Browse the definitions from the sidebar on the left.
+                  Operators are special characters that has special meaning in a XPath expression.
                 </p>
+
+                <div class="tag-box tag-box-v3">
+                  <h3>/ Child</h3>
+                  <p>
+                    Selects the children of the current context. When used at the beginning of the expression, it starts from the root node.
+                  </p>
+
+                  <pre>/root/child </pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>// Recursive Descent</h3>
+
+                  <p>
+                    Searches the document, descending from the current context. When used at the beginning of the expression, it searches the entire document from the root node.
+                  </p>
+
+                  <pre>//span </pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>. Dot</h3>
+
+                  <p>
+                    Selects the current context. By default it takes the root node as the current context.
+                  </p>
+
+                  <pre>//td[.="foo"]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>.. Double dot</h3>
+
+                  <p>
+                    Selects the parent of the current context.
+                  </p>
+
+                  <pre>/table/tr/td/..</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>* Wildcard</h3>
+
+                  <p>
+                    Selecta all nodes from the current context.
+                  </p>
+
+                  <pre>/table/tr/td/table/*/td</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>@ Attribute</h3>
+
+                  <p>
+                    Selects the node with the attribute and returns the attribute.
+                  </p>
+
+                  <pre>//div/@style</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>@* Attribute wildcard</h3>
+
+                  <p>
+                    Selects nodes with any attributes and returns the attributes.
+                  </p>
+
+                  <pre>//@*</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>() Round brackets</h3>
+
+                  <p>
+                    Expressions within round brackets takes precedence in the evaluation order
+                  </p>
+
+                  <pre>(//@*)[1]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>Square brackets</h3>
+
+                  <p>
+                    Used both as a subscript operator and to encapsulate a filter expression.
+                  </p>
+
+                  <pre>(//td)[2]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>Arithmetic</h3>
+
+                  <p>
+                    Basic arithmetic operations such as addition, subtraction, multiplication, devision and modulo are available.
+                  </p>
+
+                  <pre>count(//td) + count(//table)</pre>
+                </div>
+
               </div>
             </div><!--/row-->
             <!-- End Paragraph and Heading Examples -->

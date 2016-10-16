@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
   <head>
-    <title>Everyday XPath | XPath Reference</title>
+    <title>Everyday XPath | XPath Reference | Filters</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -306,10 +306,81 @@
             <div class="row margin-bottom-20">
               <!-- Paragraph Examples -->
               <div class="col-md-12">
-                <div class="headline"><h2>XPath Reference</h2></div>
+                <div class="headline"><h2>Operators</h2></div>
                 <p>
-                  This site contains the reference to XPath syntax, operators, axes and functions. Browse the definitions from the sidebar on the left.
+                  Filter expressions are meant for applying to collections. You can add filter expressions at any part of the XPath expression. Filters are applied relative to their context. They also have its own set of operators.
                 </p>
+
+                <div class="tag-box tag-box-v3">
+                  <h3>and Logical-and</h3>
+                  <p>
+                    The logical and operator evaluates both sides of operands and returns true if and only if all of its operands are true.
+                  </p>
+
+                  <pre>//tr[@class="odd" and @style]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>or Logical-or</h3>
+
+                  <p>
+                    The logical or operator evaluates both sides of operands and returns true if one of its operand is true.
+                  </p>
+
+                  <pre>//tr[@class="odd" or @class="even"] </pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>not Negation</h3>
+
+                  <p>
+                    The not operator negates the expression.
+                  </p>
+
+                  <pre>//tr[not(@class="odd")]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>= Equality</h3>
+
+                  <p>
+                    The equality operator checks that both operands are equal in value.
+                  </p>
+
+                  <pre>//tr[td="Foxtrot"]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>!= Inequality</h3>
+
+                  <p>
+                    The inequality operator checks that both operands are not equal in value.
+                  </p>
+
+                  <pre>//tr[@class!="even"]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>Less/Greater than</h3>
+
+                  <p>
+                    The less than and greater than operators checks that the values of both operands are less than or greater than one another.
+                  </p>
+
+                  <pre>//tr[string-length(@class)>3]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>| Union</h3>
+
+                  <p>
+                    The union operator returns the union of two sets of nodes. It is usually used for combining results from multiple expressions.
+                  </p>
+
+                  <pre>//td[.="Bravo"] | //td[.="Charlie"]</pre>
+
+                </div>
+
               </div>
             </div><!--/row-->
             <!-- End Paragraph and Heading Examples -->
