@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <title>Everyday XPath | XPath Reference | Functions</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/ref/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ref/assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="/ref/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="/ref/assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/ref/assets/plugins/animate.css">
+    <link rel="stylesheet" href="/ref/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/ref/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="/ref/assets/css/theme-colors/default.css" id="style_color">
+    <link rel="stylesheet" href="/ref/assets/css/theme-skins/dark.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/ref/assets/css/custom.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--=== Header ===-->
+      <div class="header">
+        <div class="container">
+          <!-- Logo -->
+          <!-- End Logo -->
+
+        </div><!--/end container-->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+          <div class="container">
+            <ul class="nav navbar-nav">
+            </ul>
+          </div><!--/end container-->
+        </div><!--/navbar-collapse-->
+      </div>
+      <!--=== End Header ===-->
+
+      <!--=== Breadcrumbs ===-->
+      <div class="breadcrumbs">
+        <div class="container">
+          <h1 class="pull-left">
+            <a class="logo" href="/">
+              Everyday<span>XPath</span>
+            </a>
+          </h1>
+          <ul class="pull-right breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Reference</li>
+          </ul>
+        </div>
+      </div><!--/breadcrumbs-->
+      <!--=== End Breadcrumbs ===-->
+
+      <!--=== Content Part ===-->
+      <div class="container content">
+        <div class="row">
+          <!-- Begin Sidebar Menu -->
+          <div class="col-md-3">
+            <ul class="list-group sidebar-nav-v1" id="sidebar-nav">
+              <!-- Operators -->
+              <li class="list-group-item list-toggle">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-operators">Operators</a>
+                <ul id="collapse-operators" class="collapse">
+                  <li><a href="shortcode_btn_general.html"> Intro</a></li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> / Child</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> // Recursive Descent</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> . Dot</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> .. Double dot</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> * Wildcard</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> @ Attribute</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> @* Attribute wildcard</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> () Round brackets</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> [] Square brackets</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> Arithmetic</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Operators -->
+
+              <!-- Filters -->
+              <li class="list-group-item list-toggle">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-filters">Filters</a>
+                <ul id="collapse-filters" class="collapse">
+                  <li><a href="shortcode_btn_general.html"> Intro</a></li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> and</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> or</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> not()</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> =</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> !=</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> &lt;</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> &lt;=</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> &gt;</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> &gt;=</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> |</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Filters -->
+
+              <!-- Axes -->
+              <li class="list-group-item list-toggle">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-axes">Axes</a>
+                <ul id="collapse-axes" class="collapse">
+                  <li><a href="shortcode_btn_general.html"> Intro</a></li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> ancestor</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> ancestor-or-self</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> attribute</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> child</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> descendant</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> descendant-or-self</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> following</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> following-sibling</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> namespace</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> parent</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> preceding</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> preceding-sibling</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> self</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Axes -->
+
+              <!-- Functions -->
+              <li class="list-group-item list-toggle">
+                <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-functions">Functions</a>
+                <ul id="collapse-functions" class="collapse">
+                  <li><a href="shortcode_btn_general.html"> Intro</a></li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> count</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> id</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> last</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> position</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> local-name</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> name</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> namespace-uri</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> concat</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> contains</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> normalize-space</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> starts-with</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> string</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> string-length</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> substring</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> substring-after</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> substring-before</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> translate</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> boolean</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> false</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> true</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> lang</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> not</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> ceiling</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> floor</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> number</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> round</a>
+                  </li>
+                  <li>
+                    <a href="shortcode_btn_brands.html"> sum</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Functions -->
+
+            </ul>
+          </div>
+          <!-- End Sidebar Menu -->
+
+          <!-- Begin Content -->
+          <div class="col-md-9">
+            <!-- Paragraph and Heading Examples -->
+            <div class="row margin-bottom-20">
+              <!-- Paragraph Examples -->
+              <div class="col-md-12">
+                <div class="headline"><h2>Functions</h2></div>
+                <p>
+                  There are a variety of in-built functions for manipulating results.
+                </p>
+
+                <div class="tag-box tag-box-v3">
+                  <h3>count(node-set)</h3>
+                  <p>
+                    Returns the number of nodes in the context.
+                  </p>
+
+                  <pre>count(//td)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>id()</h3>
+
+                  <p>
+                    Selects nodes by their ID attribute. Note that the ID attribute is declared in the DTD, not the literal id attribute. If it is not declared, the function cannot be used.
+                  </p>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>last(node-set)</h3>
+
+                  <p>
+                    Selects the last node in the set of nodes returned.
+                  </p>
+
+                  <pre>/table/tr[last()]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>position()</h3>
+
+                  <p>
+                    Returns a number that is the position of the current context.
+                  </p>
+
+                  <pre>/table/tr[position()>3]</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>local-name(node-set)</h3>
+
+                  <p>
+                    Returns the localname of the node in the current context which is also the unprefixed name. If there are more than 1 node, it returns the local name of the first node.
+                  </p>
+
+                  <pre>local-name(/root/foo:animals)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>name(node-set)</h3>
+
+                  <p>
+                    Returns the qualified name of the node in the current context. The qualified name includes the prefix, if it is present. Similarly, if there are more than 1 node, it returns the qualified name of the first node.
+                  </p>
+
+                  <pre>name(/root/foo:animals)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>namespace-uri()</h3>
+
+                  <p>
+                    Returns the URI associated with the current context’s namespace.
+                  </p>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>concat(string, string, string*)</h3>
+
+                  <p>
+                    Joins the string arguments together, forming one string.
+                  </p>
+
+                  <pre>concat("a", "b", "c")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>contains(string, string)</h3>
+
+                  <p>
+                    Returns true if the first argument string contains the second argument string; otherwise false.
+                  </p>
+
+                  <pre>contains("there", "here")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>normalize-space(string)</h3>
+
+                  <p>
+                    Returns a string with leading and trailing white spaces removed.
+                  </p>
+
+                  <pre>normalize-space(" string with trailing spaces ")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>starts-with(string, string)</h3>
+
+                  <p>
+                    Checks if the first argument begins with the second argument and returns a Boolean.
+                  </p>
+
+                  <pre>starts-with("christine", "chris")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>string(obj)</h3>
+
+                  <p>
+                    Converts the argument into a string. When given a list of nodes, it converts the first node in the list.
+                  </p>
+
+                  <pre>string(//td/text())</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>string-length(string)</h3>
+
+                  <p>
+                    Returns the number of characters in the string.
+                  </p>
+
+                  <pre>string-length("123456")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>substring-before(string, string)</h3>
+
+                  <p>
+                    Finds the first occurrence of the second argument from the first argument and returns the substring leading to it.
+                  </p>
+
+                  <pre>substring-before("http://www.foo.com", ".")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>translate(string, string, string)</h3>
+
+                  <p>
+                    The translate function accepts 3 arguments. The first argument is the reference string. The second argument is a string of characters which are the characters to find from the reference string. The third argument is also a string of characters which are to replace the characters in the corresponding position in the second argument.
+                  </p>
+
+                  <pre>translate("http://www.foo.com", ".", "-")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>boolean(expression)</h3>
+
+                  <p>
+                    The Boolean function converts the argument to a Boolean value. If the argument is a negative or positive number, it returns true. If the argument is zero or an NaN value, it returns false.
+                  </p>
+
+                  <pre>boolean(1)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>false()</h3>
+
+                  <p>
+                    The false function always returns false. It accepts no arguments. It could be useful when used together with other conditional operators.
+                  </p>
+
+                  <pre>false()</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>true()</h3>
+
+                  <p>
+                    Similarly, the true function always returns true. It accepts no arguments. It could be useful when used together with other conditional operators.
+                  </p>
+
+                  <pre>true()</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>lang(string)</h3>
+
+                  <p>
+                    Returns true if the xml:lang attribute of the context node is the same as the argument string.
+                  </p>
+
+                  <pre>lang("en")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>not(boolean)</h3>
+
+                  <p>
+                    Returns true if the argument is false, and vice versa.
+                  </p>
+
+                  <pre>not(boolean(1))</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>ceiling(number)</h3>
+
+                  <p>
+                    Returns the smallest integer greater or equals to the argument.
+                  </p>
+
+                  <pre>ceiling(1.6)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>floor(number)</h3>
+
+                  <p>
+                    Returns the largest integer less than or equal to the argument.
+                  </p>
+
+                  <pre>floor(1.6)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>number(obj)</h3>
+
+                  <p>
+                    Converts the argument to a number.
+                  </p>
+
+                  <pre>number("  - 9.7  ")</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>round(number)</h3>
+
+                  <p>
+                    Returns an integer nearest in value to the argument.
+                  </p>
+
+                  <pre>round(1.5)</pre>
+
+                  <hr class="devider devider-dashed">
+
+                  <h3>sum(expression)</h3>
+
+                  <p>
+                    Returns the sum of all nodes in the node-set. Each node is first converted to a number value before aggregating into a sum.
+                  </p>
+
+                  <pre>sum(//td)</pre>
+
+                </div>
+
+              </div>
+            </div><!--/row-->
+            <!-- End Paragraph and Heading Examples -->
+          </div>
+          <!-- End Content -->
+        </div>
+      </div><!--/container-->
+      <!--=== End Content Part ===-->
+    </div><!--/wrapper-->
+
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="/ref/assets/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/ref/assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="/ref/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="/ref/assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="/ref/assets/plugins/smoothScroll.js"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="/ref/assets/js/custom.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="/ref/assets/js/app.js"></script>
+    <script type="text/javascript" src="/ref/assets/js/plugins/style-switcher.js"></script>
+    <script type="text/javascript">
+     jQuery(document).ready(function() {
+         App.init();
+         StyleSwitcher.initStyleSwitcher();
+     });
+    </script>
+    <!--[if lt IE 9]>
+      <script src="/ref/assets/plugins/respond.js"></script>
+      <script src="/ref/assets/plugins/html5shiv.js"></script>
+      <script src="/ref/assets/plugins/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+
+  </body>
+</html>
